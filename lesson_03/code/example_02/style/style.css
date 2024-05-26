@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.block1 {
+    background-color: bisque;
+    width: 50%;
+}
+
+.inner1 {
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    color: blue;
+    text-align: justify;
+    /* border-color: black;
+    border-style: solid;
+    border-width: 3px; */
+    border: solid 3px black;
+    /* border-radius: 10px; */
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+.block2 {
+    height: 100px;
+    width: 100px;
+    background-color: burlywood;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 40px;
+}
