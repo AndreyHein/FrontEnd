@@ -14,14 +14,16 @@ body {
     flex-direction: column;
     justify-content: space-between;
     font-family: Arial, sans-serif;
+    padding: 10px;
 }
 
 .header {
     background-color:burlywood;
-    height: 150px;
+    min-height: 15vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2vh;
 }
 
 .heading {
@@ -37,6 +39,8 @@ body {
     align-items: center;
     color: white;
     font-size: 24px;
+    margin-bottom: 2vh;
+    padding: 10px;
 }
 
 .main a {
@@ -45,12 +49,12 @@ body {
 }
 
 .main a:hover {
-    text-decoration: underline; /* Optional: Adds underline on hover for better visibility */
+    text-decoration: underline;
 }
 
 .footer {
     background-color:burlywood;
-    height: 150px;
+    min-height: 15vh;
     display: flex;
     justify-content: center;
     align-items: center;
