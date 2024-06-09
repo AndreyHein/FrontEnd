@@ -76,7 +76,7 @@ let reverseStr;
 let strArray = [str, str1, str2, str3];
 for (let i = 0; i < strArray.length; i++) {
     for (let j = 0; j < punctuation.length; j++) {
-        clearStr = clearStr.replaceAll(punctuation[i], '');
+        clearStr = strArray[i].replaceAll(punctuation[i], '');
     }
     clearStr = clearStr.toLowerCase().replaceAll(' ', '');
     reverseStr = clearStr.split('').reverse().join('');
