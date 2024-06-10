@@ -11,7 +11,7 @@ console.log(Math.min(...arr1));
 // Task #2
 const arr2 = ["Remover", 4, 98, "abs", null, undefined, [1, 2, 3], "Hello", true, -1.95];
 console.log(arr2);
-arr2.push(arr2.splice(0, 1));
+arr2.push(arr2.splice(0, 1)[0]);
 console.log(arr2);
 
 // Task #3
