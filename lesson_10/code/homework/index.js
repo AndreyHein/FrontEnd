@@ -35,11 +35,11 @@ function eventArray(a) {
     const arrOfEven = [];
     const notEven = (x) => {
         if(x % 2 === 0) return true;
-        return false
+        return false;
     }
     for(let i = 1; i <= a; i++) {
         if(notEven(i)) arrOfEven.push(i);
     }
     return arrOfEven;
 }
-console.log(`Even elements between 1 and ${top} is ${eventArray(Math.floor(top))}`)
+console.log(`Even elements between 1 and ${top} is ${eventArray(Math.floor(top))}`);
