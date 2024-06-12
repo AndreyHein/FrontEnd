@@ -36,14 +36,14 @@ console.log(reverseWords(str));
 function intersection(arr1, arr2) {
     const resultArr = [];
     if(arr1.length > arr2.length) {
-        for(i = 0; i < long; i++) {
-            for(j = 0; j < short; j++) {
+        for(i = 0; i < arr1.length; i++) {
+            for(j = 0; j < arr2.length; j++) {
                 if(arr1[i] === arr2[j]) resultArr.push(arr1[i]);
             }
         }
     } else {
-        for(i = 0; i < long; i++) {
-            for(j = 0; j < short; j++) {
+        for(i = 0; i < arr2.length; i++) {
+            for(j = 0; j < arr1.length; j++) {
                 if(arr2[i] === arr1[j]) resultArr.push(arr2[i]);
             }
         }
@@ -51,3 +51,4 @@ function intersection(arr1, arr2) {
     return resultArr;
 }
 
+console.log(intersection([1, 5, 4, 2], [8, 91, 4, 1, 3]));

@@ -31,17 +31,19 @@ const bottom = (Math.random() * 100) + top; //second argument
 console.log(`Summe even numbers between ${top} and ${bottom} is ${sumOfEven(top, bottom)}`);
 
 // Task #4  (Решето Эратосфена)
-const num = 100;                        // last number of the range
-const arrOfPrimeNumber = [];
-for(let i = 2; i < num; i++) {
+
+const notPrime = (x, y) => {
+    if(x % y === 0) return true;
+    return false;
+}
+
+function primeArray(a) {
+    const arrOfPrimeNumber = [];
+for(let i = 2; i < a; i++) {
     arrOfPrimeNumber.push(i);
 }
-function primeArray(a) {
      let divIndex = 0;
-    const notPrime = (x, y) => {
-        if(x % y === 0) return true;
-        return false;
-    }
+
     while(divIndex <= arrOfPrimeNumber.length) {
         let divider = arrOfPrimeNumber[divIndex];
         for(let i = arrOfPrimeNumber.length - 1; i > divIndex; i--) {
@@ -53,4 +55,6 @@ function primeArray(a) {
     }
     return arrOfPrimeNumber;
 }
-console.log(`Prime elements between 1 and ${num} is ${primeArray(num)}`);
+console.log(`Prime elements between 1 and ${20} is ${primeArray(20)}`);
+console.log(`Prime elements between 1 and ${50} is ${primeArray(50)}`);
+console.log(`Prime elements between 1 and ${20} is ${primeArray(20)}`);
