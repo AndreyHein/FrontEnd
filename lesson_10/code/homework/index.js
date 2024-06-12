@@ -20,7 +20,7 @@ for (let i = 0; i < 5; i++) {
 // Task #3
 function sumOfEven(a, b) {
     let sum = 0;
-    for(let i = Math.ceil(a); i <= Math.floor(b); i++) {
+    for(let i = Math.floor(a); i <= Math.floor(b); i++) {
         if( i % 2 === 0) sum += i;
     }
     return sum;
@@ -30,16 +30,27 @@ const top = Math.random() * 100;            //first argument
 const bottom = (Math.random() * 100) + top; //second argument
 console.log(`Summe even numbers between ${top} and ${bottom} is ${sumOfEven(top, bottom)}`);
 
-// Task #4
-function eventArray(a) {
-    const arrOfEven = [];
-    const notEven = (x) => {
-        if(x % 2 === 0) return true;
+// Task #4  (Решето Эратосфена)
+const num = 100;                        // last number of the range
+const arrOfPrimeNumber = [];
+for(let i = 2; i < num; i++) {
+    arrOfPrimeNumber.push(i);
+}
+function primeArray(a) {
+     let divIndex = 0;
+    const notPrime = (x, y) => {
+        if(x % y === 0) return true;
         return false;
     }
-    for(let i = 1; i <= a; i++) {
-        if(notEven(i)) arrOfEven.push(i);
+    while(divIndex <= arrOfPrimeNumber.length) {
+        let divider = arrOfPrimeNumber[divIndex];
+        for(let i = arrOfPrimeNumber.length - 1; i > divIndex; i--) {
+            if(notPrime(arrOfPrimeNumber[i], divider)) {
+                arrOfPrimeNumber.splice(i, 1);
+            }
+        }
+        divIndex++;
     }
-    return arrOfEven;
+    return arrOfPrimeNumber;
 }
-console.log(`Even elements between 1 and ${top} is ${eventArray(Math.floor(top))}`);
+console.log(`Prime elements between 1 and ${num} is ${primeArray(num)}`);
