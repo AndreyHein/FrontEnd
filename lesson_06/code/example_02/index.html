@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class="conteiner">
+        <header class="header">Header</header>
+        <aside class="left">Left</aside>
+        <main class="main">
+            <h3>Main</h3>
+            <div id="dimensions"> Width: <span id="width"></span>, Height: <span id="height"></span></div>
+        </main>
+        <section class="banner">Banner</section>
+        <aside class="right">Right</aside>
+        <section class="low-content">Low Content</section>
+        <footer class="footer">Footer</footer>
+
+        <script>
+            function updateDimensions() {
+                const width = window.innerWidth;
+                const height = window.innerHeight;
+                document.getElementById('width').textContent = width;
+                document.getElementById('height').textContent = height;
+            }
+
+            window.addEventListener('resize', updateDimensions);
+            document.addEventListener('DOMContentLoaded', updateDimensions);
+        </script>
+    </div>
+</body>
+
+</html>
