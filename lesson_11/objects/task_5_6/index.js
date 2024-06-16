@@ -32,20 +32,17 @@ const obj3 = { name: 'Mark', age: 17, student: false, };
 const obj4 = { name: 'John', age: 17, };
 
 function compareObjects(firstObj, secondObj) {
-    if (Object.keys(firstObj).length === Object.keys(secondObj).length) {
-        for (let key in firstObj) {
-            if(key in secondObj) {
-                if(firstObj[key] !== secondObj[key]) {
-                    return false;
-                }
-            } else {
+    if (Object.keys(firstObj).length !== Object.keys(secondObj).length) { return false }
+    for (let key in firstObj) {
+        if (key in secondObj) {
+            if (firstObj[key] !== secondObj[key]) {
                 return false;
             }
+        } else {
+            return false;
         }
-        return true;
-    } else {
-        return false;
     }
+    return true;
 }
 console.log(compareObjects(obj1, obj2));    // false
 console.log(compareObjects(obj1, obj3));    // false
