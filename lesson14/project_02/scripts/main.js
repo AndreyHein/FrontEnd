@@ -33,7 +33,18 @@ let todoList = [
         });
     }
 
-    
+    const fetchResult = async () => {
+        const response = await fetch('https://jsonplaceholder.typicode.com/todos')
+        const bodyData = await response.json();
+       
+        const v1 = bodyData.map(list => {
+            return {
+            task: list.title,
+            done: list.completed}
+        })
+        core(v1);
+    }
+    const toDoList1 = fetchResult()
     
 
     createButton.addEventListener('click', () => {
